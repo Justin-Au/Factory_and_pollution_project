@@ -1,8 +1,7 @@
 # The Effect of Illegal Factories on Water Pollution
-This research project tries to analyze the damage brings by illegal factories on farmland in Taiwan. This is a serious problem since long ago. Factories illegally occuiped farmlands to reduce their costs. As they are not being regulated by the government, the inappropriate design of waste water discharge facilities would lead to severe disturbance on the quality of surface water and groundwater. This project uses regression models to evaluate the relationship between illegal factories and water pollution. Ordinary least squares is adopted first. Then two-stage least squares with an instrumental variable is chosen to handle endogeneity. The results show that more illegally occupied farmland area by factories contributes to a higher concentration of arsenic, lead, manganese and zinc in river and groundwater.
+This research project tries to analyze the damage brings by illegal factories on farmland in Taiwan. This is a serious problem since long ago. Factories illegally occuiped farmlands to reduce their costs. As they are not being regulated by the government, the inappropriate design of waste water discharge facilities would lead to severe disturbance on the quality of surface water and groundwater. This project uses regression models to evaluate the relationship between illegal factories and water pollution in 2017. Ordinary least squares (OLS) is adopted first. Then two-stage least squares (2SLS) with an instrumental variable (IV) is chosen to handle endogeneity. The results show that more illegally occupied farmland area by factories contributes to a higher concentration of arsenic, lead, manganese and zinc in river and groundwater.
 
 ## Background
-**Web Scraping:** Python - BeautifulSoup  
 **Map Plotting:** R - ggplot, rgdal, rgeos, maptools, RColorBrewer  
 **Statistical Analysis:** SAS, STATA, Excel  
 **Datasets:** 
@@ -13,23 +12,30 @@ This research project tries to analyze the damage brings by illegal factories on
 5. Census of Agricultural, Forestry, Fishery and Animal Husbandry - Directorate General of Budget, Accounting and Statistics
 6. Declaration of Income Tax Returns from Fiscal Information Agency - Ministry of Finance
 7. Historical weather records - Central Weather Bureau
-
-
-## Web Scraping
-**Historical weather records:**
+8. Election database - Central Election Commission
 
 
 ## Data Cleaning
 **Water quality data:**
-1. Observations without any data are dropped
-2. Variables with more than 10% of missing values are dropped
-3. The 'smaller than' sign is taken away, e.g. <0.001 is replaced by 0.001
-4. Data are measured in every quarter of the year, but we only concern an annual value here. The means of every variable are calculated
+- Each row represents the water quality in each township/district
+- Observations without any data are dropped
+- Variables with more than 10% of missing values are dropped
+- The 'smaller than' sign is taken away, e.g. <0.001 is replaced by 0.001
+- Data are measured in every quarter of the year, but we only concern an annual value here. We calculated the mean for each township/district
 
-5. Datasets are collected from various sources, so they are appended to **Water quality data** by the variable *township/district code*
+**For datasets 2-8:**
+Datasets are collected from various sources, a new column *township/district code* is added to datasets 2-7. So, they could be appended with **Water quality data** by the *township/district code*
+
+## Data Engineering
+**Agriculture and Farmland Resources Survey:**
+Illegally occupied farmland area 
+
+**Election database (instrumental variable):**
+Kuomintang (KMT) and Democratic Progressive Party (DPP) are the two main political parties in Taiwan. As DPP was the ruling party in 2017, we regarded DPP as 1 and other parties as 0. Then, we calculated the number of times that DPP had won county magistrates, city mayors or speical-municipality mayors in 2009/10 and 2014. This number was treated as the impact of the ruling party on illegally occupied farmland area.
 
 
 ## Map Plotting
+**R - ggplot, rgdal, rgeos, maptools, RColorBrewer**
 
 ![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/map.png "The Distribution of Illegally Occupied Farmlands in Taiwan")
 
@@ -45,10 +51,21 @@ This research project tries to analyze the damage brings by illegal factories on
 
 
 ## Results
+For both river and groundwater samples, the first stage result indicates that DPP has positive impact on illegally occupied farmland area. The significance of the estimation results has proved that the IV is informative and we could use it to proceed the 2SLS estimation.  
 
-<!--
+For OLS, the result shows that illegally occupied farmland area significantly affects the concentrations of copper (Cu) and zinc (Zn) in river sample and the concentrations of arsenic (As) and Zn in groundwater sample. For 2SLS, the concentrations of As and Zn in both river and groundwater samples as well as the concentrations of lead (Pb) and manganese (Mn) in groundwater are significantly affected by illegally occupied farmland area.  
+
+Please refer to tables 3-6 for detailed results.  
+  
+  
 ![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/first_stage_river.png "First Stage Result of River Sample")
+  
+  
 ![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/ols_2sls_river.png "The Effect on Dependent Variables of River Sample")
+  
+  
 ![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/first_stage_gdwater.png "First Stage Result of Groundwater Sample")
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/ols_2sls_gdwater.png "The Effect on Dependent Variables of Groundwater Sample") -->
+  
+  
+![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/ols_2sls_gdwater.png "The Effect on Dependent Variables of Groundwater Sample")
 
