@@ -27,18 +27,6 @@ This research project tries to analyze the damage brings by illegal factories on
 **For datasets 2-8:**
 Datasets are collected from various sources, a new column *township/district code* is added to datasets 2-7. So, they could be appended with **Water quality data** by the *township/district code*
 
-## Data Exploration
-- The figure below shows the increasing number of illegal factories in recent years.  
-  
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/illegal_factories_num.png "Total Number of Illegal Factories")  
-  
-  
-- Tables 1 and 2 show the sample description of river and groundwater samples respectively.  
-  
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/sample_description_river.png "Sample Description of River Sample")  
-  
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/sample_description_gdwater.png "Sample Description of Groundwater Sample")
-
 
 ## Data Engineering
 **Election database (instrumental variable):**  
@@ -52,21 +40,7 @@ Kuomintang (KMT) and Democratic Progressive Party (DPP) are the two main politic
 
 
 ## Results
-For both river and groundwater samples, the first stage result indicates that DPP has positive impact on illegally occupied farmland area. The significance of the estimation results has proved that the IV is informative and we could use it to proceed the 2SLS estimation.  
+For both river and groundwater samples, the first stage result indicates that DPP has positive impact on illegally occupied farmland area. The significance of the estimation results (with p-value < 0.01) has proved that the IV is informative and we could use it to proceed the 2SLS estimation.  
 
 For OLS, the result shows that illegally occupied farmland area significantly affects the concentrations of copper (Cu) and zinc (Zn) in river sample and the concentrations of arsenic (As) and Zn in groundwater sample. For 2SLS, the concentrations of As and Zn in both river and groundwater samples as well as the concentrations of lead (Pb) and manganese (Mn) in groundwater are significantly affected by illegally occupied farmland area.  
-
-Please refer to tables 3-6 for detailed results.  
-  
-  
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/first_stage_river.png "First Stage Result of River Sample")
-  
-  
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/ols_2sls_river.png "The Effect on Dependent Variables of River Sample")
-  
-  
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/first_stage_gdwater.png "First Stage Result of Groundwater Sample")
-  
-  
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/ols_2sls_gdwater.png "The Effect on Dependent Variables of Groundwater Sample")
 
