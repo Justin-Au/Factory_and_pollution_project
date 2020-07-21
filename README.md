@@ -42,5 +42,5 @@ Kuomintang (KMT) and Democratic Progressive Party (DPP) are the two main politic
 ## Results
 For both river and groundwater samples, the first stage result indicates that DPP has positive impact on illegally occupied farmland area. The significance of the estimation results (with p-value < 0.01) has proved that the IV is informative and we could use it to proceed the 2SLS estimation.  
 
-For OLS, the result shows that illegally occupied farmland area significantly affects the concentrations of copper (Cu) and zinc (Zn) in river sample and the concentrations of arsenic (As) and Zn in groundwater sample. For 2SLS, the concentrations of As and Zn in both river and groundwater samples as well as the concentrations of lead (Pb) and manganese (Mn) in groundwater are significantly affected by illegally occupied farmland area.  
+For OLS, the result shows that illegally occupied farmland area significantly raises the concentrations of copper (Cu) and zinc (Zn) in river sample and the concentrations of arsenic (As) and Zn in groundwater sample. For 2SLS, the concentrations of As and Zn in both river and groundwater samples as well as the concentrations of lead (Pb) and manganese (Mn) in groundwater increases due to illegal factories.  
 
