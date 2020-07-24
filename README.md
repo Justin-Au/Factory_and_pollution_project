@@ -36,7 +36,7 @@ Kuomintang (KMT) and Democratic Progressive Party (DPP) are the two main politic
 ## Map Plotting
 **R - ggplot, rgdal, rgeos, maptools, RColorBrewer**
 
-![alt text](https://github.com/auweiting/Factory_and_pollution_project/blob/master/map.png "The Distribution of Illegally Occupied Farmlands in Taiwan")
+![alt text](https://github.com/auweiting/Factory_and_pollution/blob/master/map.png "The Distribution of Illegally Occupied Farmlands in Taiwan")
 
 
 ## Results
